@@ -39,6 +39,10 @@ This guide translates my personal installation, with packages that I use in my d
 | `make sync-time`                 | Synchronizes the system time                                      |
 | `make usermod`                   | Modifies system user settings                                     |
 
+## Preview
+
+![](./assets/preview.png)
+
 ## Links
 
 - [My Dotfiles](https://github.com/gabrielscaranello/dotfiles)
