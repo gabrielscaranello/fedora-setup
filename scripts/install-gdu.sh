@@ -1,9 +1,9 @@
 #! /bin/bash
 
-LAST_VERSION=$(curl -s https://api.github.com/repos/dundee/gdu/releases/latest | grep -Po '"tag_name": "v\K[^"]*')
-FILE_NAME="gdu_${LAST_VERSION}.x86_64.rpm"
+API_URL="https://api.github.com/repos/dundee/gdu/releases/latest"
+DOWNLOAD_URL=$(curl -s $API_URL | jq -r '.assets[] | select(.browser_download_url | test("\\.x86_64\\.rpm$")) | .browser_download_url')
+FILE_NAME="gdu_x86_64.rpm"
 OUTPUT_FILE="/tmp/$FILE_NAME"
-DOWNLOAD_URL="https://github.com/dundee/gdu/releases/download/v$LAST_VERSION/$FILE_NAME"
 
 echo "Installing GDU..."
 
