@@ -1,9 +1,8 @@
 #! /bin/bash
 
 APPS=(
-	nm-connection-editor
+	btop
 	nvim
-	org.gnome.Tour
 )
 
 echo "Hiding desktop apps..."

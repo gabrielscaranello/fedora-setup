@@ -1,93 +1,67 @@
 #! /bin/bash
 
-PWD=$(pwd)
-
-. $PWD/scripts/_utils.sh
+_add_bottom_repo() {
+	echo "Adding bottom repo..."
+	sudo dnf copr enable atim/bottom -y
+	echo "bottom repo added."
+}
 
 _add_docker_repo() {
-	echo "Adding Docker repo..."
+	echo "Adding docker repo..."
+
 	echo "Removing old files if exists..."
-	sudo rm -rf /etc/apt/keyrings/docker.gpg /etc/apt/sources.list.d/docker.list
+	sudo rm -rf /etc/yum.repos.d/docker-ce.repo
 
-	echo "Adding Docker repo..."
-	sudo install -m 0755 -d /etc/apt/keyrings
-	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-	sudo chmod a+r /etc/apt/keyrings/docker.gpg
-	echo "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu jammy stable" | sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
+	echo "Adding docker repo..."
+	sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
 
-	echo "Docker repo added."
+	echo "docker repo added."
 }
 
-_add_golang_repo() {
-	echo "Adding Golang repo..."
-	echo "Removing old files if exists..."
-	sudo add-apt-repository -r -y ppa:longsleep/golang-backports
-
-	echo "Adding Golang repo..."
-	sudo add-apt-repository -y ppa:longsleep/golang-backports
-
-	echo "Golang repo added."
+_add_lazydocker_repo() {
+	echo "Adding lazydocker repo..."
+	sudo dnf copr enable atim/lazydocker -y
+	echo "lazydocker repo added."
 }
 
-_add_onlyoffice_repo() {
-	echo "Adding OnlyOffice repo..."
-	echo "Removing old files if exists..."
-	sudo rm -rf /etc/apt/sources.list.d/onlyoffice.list /usr/share/keyrings/onlyoffice.gpg
-
-	echo "Adding OnlyOffice repo..."
-	mkdir -p -m 700 ~/.gnupg
-	gpg --no-default-keyring --keyring gnupg-ring:/tmp/onlyoffice.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys CB2DE8E5
-	chmod 644 /tmp/onlyoffice.gpg
-	sudo chown root:root /tmp/onlyoffice.gpg
-	sudo mv /tmp/onlyoffice.gpg /usr/share/keyrings/onlyoffice.gpg
-	echo 'deb [signed-by=/usr/share/keyrings/onlyoffice.gpg] https://download.onlyoffice.com/repo/debian squeeze main' | sudo tee -a /etc/apt/sources.list.d/onlyoffice.list
-
-	echo "OnlyOffice repo added."
+_add_lazygit_repo() {
+	echo "Adding lazygit repo..."
+	sudo dnf copr enable atim/lazygit -y
+	echo "lazygit repo added."
 }
 
-_add_papirus_repo() {
-	echo "Adding Papirus repo..."
+_add_rpmfusion_repo() {
+	echo "Adding rpmfusion repo..."
+
 	echo "Removing old files if exists..."
-	sudo add-apt-repository -r -y ppa:papirus/papirus
+	sudo rm -rf /etc/yum.repos.d/rpmfusion.repo
 
-	echo "Adding Papirus repo..."
-	sudo add-apt-repository -y ppa:papirus/papirus
+	echo "Adding rpmfusion repo..."
+	sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+	sudo dnf install -y https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-	echo "Papirus repo added."
-}
-
-_add_spotify_repo() {
-	echo "Adding Spotify repo..."
-	echo "Removing old files if exists..."
-	sudo rm -rf /etc/apt/trusted.gpg.d/spotify.gpg /etc/apt/sources.list.d/spotify.list
-
-	echo "Adding Spotify repo..."
-	curl -sS https://download.spotify.com/debian/pubkey_6224F9941A8AA6D1.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
-	echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-
-	echo "Spotify repo added."
+	echo "rpmfusion repo added."
 }
 
 _add_vscode_repo() {
-	echo "Adding VSCode repo..."
-	echo "Removing old files if exists..."
-	sudo rm -rf /etc/apt/sources.list.d/vscode.list /etc/apt/keyrings/packages.microsoft.gpg
+	echo "Adding vscode repo..."
 
-	echo "Adding VSCode repo..."
-	wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor >packages.microsoft.gpg
-	sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
-	sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
-	rm -f packages.microsoft.gpg
-	echo "VSCode repo added."
+	echo "Removing old files if exists..."
+	sudo rm -rf /etc/yum.repos.d/vscode.repo
+
+	echo "Adding vscode repo..."
+	sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+	echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo >/dev/null
+
+	echo "vscode repo added."
 }
 
-echo "Adding missing deb repos..."
+echo "Adding missing repos..."
+_add_bottom_repo
 _add_docker_repo
-_add_golang_repo
-_add_onlyoffice_repo
-_add_papirus_repo
-_add_spotify_repo
+_add_lazydocker_repo
+_add_lazygit_repo
+_add_rpmfusion_repo
 _add_vscode_repo
-install_nala
-sudo nala update
-echo "Missing deb repos added."
+sudo dnf update -y
+echo "Missing repos added."

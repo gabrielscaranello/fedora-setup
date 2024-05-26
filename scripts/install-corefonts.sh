@@ -1,10 +1,10 @@
 #! /bin/bash
 
-FILE_NAME="dbeaver-ce-latest-stable.x86_64.rpm"
+FILE_NAME="msttcore-fonts-installer-2.6-1.noarch.rpm"
 OUTPUT_FILE="/tmp/$FILE_NAME"
-DOWNLOAD_URL="https://dbeaver.io/files/$FILE_NAME"
+DOWNLOAD_URL="https://downloads.sourceforge.net/project/mscorefonts2/rpms/$FILE_NAME"
 
-echo "Installing DBeaver..."
+echo "Installing Corefonts..."
 
 echo "Removing old files if exists..."
 rm -rf "$OUTPUT_FILE"
@@ -15,4 +15,4 @@ wget -c "$DOWNLOAD_URL" -O "$OUTPUT_FILE"
 echo "Installing..."
 sudo dnf install -y "$OUTPUT_FILE"
 
-echo "DBeaver installed..."
+echo "Corefonts installed..."

@@ -3,11 +3,7 @@
 PWD=$(pwd)
 PACKAGES=$(cat "$PWD/unused-packages" | tr '\n' ' ')
 
-. $PWD/scripts/_utils.sh
-
 echo "Removing unused packages..."
-install_nala
-sudo nala update
-sudo nala purge -y $PACKAGES
-sudo nala autoremove
+sudo dnf remove -y $PACKAGES
+sudo dnf autoremove -y
 echo "Unused packages removed."
