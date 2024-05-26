@@ -55,6 +55,9 @@ sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gn
 [org/gnome/desktop/session]
 idle-delay=uint32 300
 
+[org/gnome/desktop/wm/keybindings]
+show-desktop=['<Super>d']
+
 [org/gnome/desktop/wm/preferences]
 action-middle-click-titlebar='minimize'
 
@@ -82,6 +85,7 @@ night-light-temperature=uint32 4700
 
 [org/gnome/settings-daemon/plugins/media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
+home=['<Super>e']
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Control><Super>s'
