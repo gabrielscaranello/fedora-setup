@@ -7,7 +7,7 @@ name='X-Pardus-Apps.directory'
 translate=true
 
 [org/gnome/desktop/app-folders/folders/Utilities]
-apps=['org.gnome.tweaks.desktop', 'org.gnome.baobab.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.FileRoller.desktop', 'gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.Connections.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.fonts.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop', 'org.gnome.Evince.desktop', 'org.gnome.Loupe.desktop', 'nvidia-settings.desktop']
+apps=['org.gnome.tweaks.desktop', 'org.gnome.baobab.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.FileRoller.desktop', 'gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.Connections.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.fonts.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop', 'org.gnome.Evince.desktop', 'org.gnome.Loupe.desktop', 'nvidia-settings.desktop', 'nvim.desktop']
 categories=['X-GNOME-Utilities']
 name='X-GNOME-Utilities.directory'
 translate=true
@@ -224,7 +224,7 @@ header-color='rgb(255,255,255)'
 alphabetize=true
 fixed-widths=true
 hide-icons=false
-hot-sensors=['_memory_usage_', '_processor_usage_', '__temperature_max__']
+hot-sensors=['_memory_usage_', '_processor_usage_', '_temperature_processor_0_']
 position-in-panel=0
 show-storage=false
 show-system=false
