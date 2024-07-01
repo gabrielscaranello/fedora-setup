@@ -18,6 +18,7 @@ bash $PWD/scripts/install-dbeaver.sh
 bash $PWD/scripts/install-gdu.sh
 bash $PWD/scripts/install-gitflow-cjs.sh
 bash $PWD/scripts/install-gnome-extensions.sh
+bash $PWD/scripts/install-go.sh
 bash $PWD/scripts/install-jetbrains-mono.sh
 bash $PWD/scripts/install-neovim.sh
 bash $PWD/scripts/install-onlyoffice.sh
