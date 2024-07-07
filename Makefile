@@ -16,6 +16,9 @@ enable-services:
 hide-desktop-apps:
 	@sh ./scripts/hide-desktop-apps.sh
 
+install-bottom:
+	@sh ./scripts/install-bottom.sh
+
 install-corefonts:
 	@sh ./scripts/install-corefonts.sh
 

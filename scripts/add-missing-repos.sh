@@ -1,11 +1,5 @@
 #! /bin/bash
 
-_add_bottom_repo() {
-	echo "Adding bottom repo..."
-	sudo dnf copr enable atim/bottom -y
-	echo "bottom repo added."
-}
-
 _add_docker_repo() {
 	echo "Adding docker repo..."
 
@@ -45,7 +39,6 @@ _add_vscode_repo() {
 }
 
 echo "Adding missing repos..."
-_add_bottom_repo
 _add_docker_repo
 _add_rpmfusion_repo
 _add_vscode_repo
