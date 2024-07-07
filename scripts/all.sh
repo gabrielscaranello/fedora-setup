@@ -20,6 +20,8 @@ bash $PWD/scripts/install-gitflow-cjs.sh
 bash $PWD/scripts/install-gnome-extensions.sh
 bash $PWD/scripts/install-go.sh
 bash $PWD/scripts/install-jetbrains-mono.sh
+bash $PWD/scripts/install-lazydocker.sh
+bash $PWD/scripts/install-lazygit.sh
 bash $PWD/scripts/install-neovim.sh
 bash $PWD/scripts/install-onlyoffice.sh
 bash $PWD/scripts/install-telegram.sh

@@ -18,18 +18,6 @@ _add_docker_repo() {
 	echo "docker repo added."
 }
 
-_add_lazydocker_repo() {
-	echo "Adding lazydocker repo..."
-	sudo dnf copr enable atim/lazydocker -y
-	echo "lazydocker repo added."
-}
-
-_add_lazygit_repo() {
-	echo "Adding lazygit repo..."
-	sudo dnf copr enable atim/lazygit -y
-	echo "lazygit repo added."
-}
-
 _add_rpmfusion_repo() {
 	echo "Adding rpmfusion repo..."
 
@@ -59,8 +47,6 @@ _add_vscode_repo() {
 echo "Adding missing repos..."
 _add_bottom_repo
 _add_docker_repo
-_add_lazydocker_repo
-_add_lazygit_repo
 _add_rpmfusion_repo
 _add_vscode_repo
 sudo dnf update -y

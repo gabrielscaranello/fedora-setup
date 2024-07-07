@@ -31,6 +31,12 @@ install-gitflow-cjs:
 install-gnome-extensions:
 	@sh ./scripts/install-gnome-extensions.sh
 
+install-lazydocker:
+	@sh ./scripts/install-lazydocker.sh
+
+install-lazygit:
+	@sh ./scripts/install-lazygit.sh
+
 install-jetbrains-mono:
 	@sh ./scripts/install-jetbrains-mono.sh
 
