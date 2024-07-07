@@ -7,8 +7,6 @@ DOWNLOAD_URL="https://github.com/brunelli/gnome-shell-extension-installer/raw/ma
 TARGET_DIR="$HOME/.local/bin"
 TOOL_FILE="$TARGET_DIR/$SCRIPT_NAME"
 
-. $PWD/scripts/_utils.sh
-
 _install_gnome_shell_extension_intaller() {
 	mkdir -p $TARGET_DIR
 
