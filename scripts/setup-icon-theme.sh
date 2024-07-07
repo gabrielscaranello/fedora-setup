@@ -13,6 +13,6 @@ bash -c "cd /tmp/catppuccin-papirus-folders && sudo cp -r src/* /usr/share/icons
 
 echo "Defining Icon Theme..."
 papirus-folders -C cat-mocha-blue
-gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
+gsettings set org.gnome.desktop.interface icon-theme "Papirus"
 
 echo "Icon Theme setup done."
