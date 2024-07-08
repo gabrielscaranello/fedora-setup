@@ -16,6 +16,6 @@ sudo akmods --force
 sudo dracut --force
 
 echo "Change to nvidia driver usign envycontrol..."
-sudo envycontrol --dm gdm --force-comp -s nvidia
+sudo envycontrol --dm sddm --force-comp -s nvidia
 
 echo "NVIDIA hybrid drivers configured."

@@ -19,7 +19,6 @@ This guide translates my personal installation, with packages that I use in my d
 | `make install-dbeaver`           | Installs DBeaver                                                  |
 | `make install-gdu`               | Installs GDU (Go Disk Usage)                                      |
 | `make install-gitflow-cjs`       | Installs GitFlow CJS                                              |
-| `make install-gnome-extensions`  | Installs GNOME extensions                                         |
 | `make install-jetbrains-mono`    | Installs JetBrains Mono font                                      |
 | `make install-lazydocker`        | Installs LazyDocker                                               |
 | `make install-lazygit`           | Installs LazyGit                                                  |
@@ -33,7 +32,6 @@ This guide translates my personal installation, with packages that I use in my d
 | `make remove-unused-repos`       | Removes unused software repositories                              |
 | `make setup-cursor-theme`        | Configures the mouse cursor theme                                 |
 | `make setup-default-apps`        | Sets default applications                                         |
-| `make setup-gtk-theme`           | Configures the GTK theme                                          |
 | `make setup-icon-theme`          | Configures the system icon theme                                  |
 | `make setup-look`                | Configures the system appearance, including themes and icons      |
 | `make setup-nvidia-hybrid`       | Configures support for NVIDIA hybrid graphics                     |
