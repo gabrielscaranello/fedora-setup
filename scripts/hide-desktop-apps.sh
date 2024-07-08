@@ -1,8 +1,10 @@
 #! /bin/bash
 
 APPS=(
-	btop
-	nvim
+	im-chooser
+	org.kde.kdeconnect.app
+	org.kde.kdeconnect.sms
+	org.kde.plasma-welcome
 )
 
 echo "Hiding desktop apps..."
