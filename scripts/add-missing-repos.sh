@@ -12,6 +12,15 @@ _add_docker_repo() {
 	echo "docker repo added."
 }
 
+_add_google_chrome() {
+	echo "Adding google chrome..."
+
+	echo "Enabling repo"
+	sudo dnf config-manager --set-enabled google-chrome
+
+	echo "Goggle chrome repo added."
+}
+
 _add_rpmfusion_repo() {
 	echo "Adding rpmfusion repo..."
 
@@ -40,6 +49,7 @@ _add_vscode_repo() {
 
 echo "Adding missing repos..."
 _add_docker_repo
+_add_google_chrome
 _add_rpmfusion_repo
 _add_vscode_repo
 sudo dnf update -y
