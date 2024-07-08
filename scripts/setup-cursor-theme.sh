@@ -23,7 +23,7 @@ sudo mkdir -p "$TARGET_DIR"
 sudo mv "$EXTRACT_DIR/$CURSOR_NAME" "$TARGET_DIR"
 
 # Set cursor
-gsettings set org.gnome.desktop.interface cursor-theme "$CURSOR_NAME"
-gsettings set org.gnome.desktop.interface cursor-size 20
+# gsettings set org.gnome.desktop.interface cursor-theme "$CURSOR_NAME"
+# gsettings set org.gnome.desktop.interface cursor-size 20
 
 echo "Bibata cursor installed"
