@@ -31,7 +31,6 @@ make
 mercurial
 ninja-build
 numlockx
-papirus-icon-theme
 piper
 protobuf
 protobuf-compiler
