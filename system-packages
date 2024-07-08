@@ -32,6 +32,7 @@ mercurial
 ninja-build
 numlockx
 piper
+plasma-firewall-ufw
 protobuf
 protobuf-compiler
 python3
@@ -41,6 +42,7 @@ ripgrep
 sassc
 tidy
 timeshift
+ufw
 unzip
 util-linux-user
 xsel
