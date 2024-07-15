@@ -6,16 +6,12 @@ PACKAGES=$(cat "$PWD/nvidia-packages" | tr '\n' ' ')
 echo "Configuring NVIDIA hybrid drivers..."
 
 echo "Enabling additional repos..."
-sudo dnf copr enable sunwire/envycontrol -y
+sudo zypper ar -ef https://download.nvidia.com/opensuse/tumbleweed NVIDIA
 
 echo "Installing driver packages"
-sudo dnf install -y $PACKAGES
+sudo zypper install $PACKAGES
 
 echo "Enabling nvidia driver..."
-sudo akmods --force
-sudo dracut --force
-
-echo "Change to nvidia driver usign envycontrol..."
-sudo envycontrol --dm gdm --force-comp -s nvidia
+sudo prime-select boot nvidia
 
 echo "NVIDIA hybrid drivers configured."

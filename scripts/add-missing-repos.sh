@@ -1,46 +1,48 @@
 #! /bin/bash
 
-_add_docker_repo() {
-	echo "Adding docker repo..."
+_add_factory_repo() {
+	echo "Adding factory repo..."
 
-	echo "Removing old files if exists..."
-	sudo rm -rf /etc/yum.repos.d/docker-ce.repo
+	sudo zypper addrepo https://download.opensuse.org/repositories/openSUSE:Factory/standard/openSUSE:Factory.repo
 
-	echo "Adding docker repo..."
-	sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
-
-	echo "docker repo added."
+	echo "Factory repo added."
 }
 
-_add_rpmfusion_repo() {
-	echo "Adding rpmfusion repo..."
+_add_google_chrome_repo() {
+	echo "Adding google chrome repo..."
 
-	echo "Removing old files if exists..."
-	sudo rm -rf /etc/yum.repos.d/rpmfusion.repo
+	sudo rpm --import https://dl.google.com/linux/linux_signing_key.pub
+	sudo tee /etc/zypp/repos.d/google-chrome.repo >/dev/null <<EOF
+[google-chrome]
+name=google-chrome
+enabled=1
+autorefresh=1
+baseurl=https://dl.google.com/linux/chrome/rpm/stable/x86_64
+gpgcheck=1
+gpgkey=https://dl.google.com/linux/linux_signing_key.pub
+type=rpm-md
+keeppackages=0
+EOF
 
-	echo "Adding rpmfusion repo..."
-	sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-	sudo dnf install -y https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-
-	echo "rpmfusion repo added."
+	echo "Google chrome repo added."
 }
 
 _add_vscode_repo() {
 	echo "Adding vscode repo..."
 
 	echo "Removing old files if exists..."
-	sudo rm -rf /etc/yum.repos.d/vscode.repo
+	sudo rm -rf /etc/zypp/repos.d/vscode.repo
 
 	echo "Adding vscode repo..."
 	sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-	echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo >/dev/null
+	sudo zypper addrepo https://packages.microsoft.com/yumrepos/vscode vscode
 
 	echo "vscode repo added."
 }
 
 echo "Adding missing repos..."
-_add_docker_repo
-_add_rpmfusion_repo
+_add_factory_repo
+_add_google_chrome_repo
 _add_vscode_repo
-sudo dnf update -y
+sudo zypper refresh
 echo "Missing repos added."

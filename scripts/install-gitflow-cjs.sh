@@ -15,7 +15,7 @@ echo "Downloading..."
 wget -c "$DOWNLOAD_URL" -O "$OUTPUT_FILE"
 
 echo "Installing..."
-sudo bash $OUTPUT_FILE install stable
+sudo sh $OUTPUT_FILE install stable
 
 echo "Cleaning up..."
 sudo rm -rf $TMP_DIR

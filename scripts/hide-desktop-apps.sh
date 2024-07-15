@@ -1,8 +1,8 @@
 #! /bin/bash
 
 APPS=(
-	btop
-	nvim
+	org.qt.qdbusviewer6
+	org.opensuse.opensuse_welcome
 )
 
 echo "Hiding desktop apps..."

@@ -4,6 +4,6 @@ PWD=$(pwd)
 PACKAGES=$(cat "$PWD/system-packages" | tr '\n' ' ')
 
 echo "Installing native packages..."
-sudo dnf upgrade -y --refresh
-sudo dnf install -y $PACKAGES
+sudo zypper dist-upgrade -y
+sudo zypper install -y $PACKAGES
 echo "native packages installed."
