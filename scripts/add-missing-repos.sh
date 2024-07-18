@@ -1,13 +1,5 @@
 #! /bin/bash
 
-_add_factory_repo() {
-	echo "Adding factory repo..."
-
-	sudo zypper addrepo https://download.opensuse.org/repositories/openSUSE:Factory/standard/openSUSE:Factory.repo
-
-	echo "Factory repo added."
-}
-
 _add_google_chrome_repo() {
 	echo "Adding google chrome repo..."
 
@@ -41,7 +33,6 @@ _add_vscode_repo() {
 }
 
 echo "Adding missing repos..."
-_add_factory_repo
 _add_google_chrome_repo
 _add_vscode_repo
 sudo zypper refresh
