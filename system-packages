@@ -10,6 +10,7 @@ docker-compose
 eza
 fd
 fetchmsttfonts
+filelight
 flameshot
 gcc-c++
 gdu
@@ -27,6 +28,7 @@ lua51
 lua51-luarocks
 make
 ninja
+partitionmanager
 piper
 python312
 python312-pip
@@ -35,5 +37,4 @@ ripgrep
 telegram-desktop
 tidy
 vlc
-zram-generator
 zsh
