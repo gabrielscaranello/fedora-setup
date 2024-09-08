@@ -9,10 +9,11 @@ echo "Cloning Icon Theme..."
 git clone https://github.com/catppuccin/papirus-folders.git /tmp/catppuccin-papirus-folders
 
 echo "Installing Icon Theme..."
+wget -qO- https://git.io/papirus-folders-install | sh
 bash -c "cd /tmp/catppuccin-papirus-folders && sudo cp -r src/* /usr/share/icons/Papirus"
 
 echo "Defining Icon Theme..."
 papirus-folders -C cat-mocha-blue
-gsettings set org.gnome.desktop.interface icon-theme "Papirus"
+gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
 
 echo "Icon Theme setup done."
