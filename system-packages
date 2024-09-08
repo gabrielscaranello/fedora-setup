@@ -31,17 +31,17 @@ google-chrome-stable
 google-roboto-fonts
 jq
 kitty
+lazygit
 libgda
 libgda-sqlite
 libsass
 libsqlite3x-devel
 luarocks
 make
-mercurial
+neovim
 ninja-build
 numlockx
 papirus-icon-theme
-perl-CPAN
 piper
 protobuf
 protobuf-compiler
@@ -52,6 +52,7 @@ ripgrep
 sassc
 sqlite
 sushi
+telegram-desktop
 tidy
 timeshift
 unzip
