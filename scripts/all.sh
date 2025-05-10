@@ -22,6 +22,7 @@ bash "${PWD}/scripts/install-go.sh"
 bash "${PWD}/scripts/install-jetbrains-mono.sh"
 bash "${PWD}/scripts/install-lazydocker.sh"
 bash "${PWD}/scripts/install-lazygit.sh"
+bash "${PWD}/scripts/install-neovim.sh"
 
 bash "${PWD}/scripts/copy-desktop-config.sh"
 bash "${PWD}/scripts/copy-timeshift-config.sh"
