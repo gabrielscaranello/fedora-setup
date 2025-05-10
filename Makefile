@@ -16,6 +16,9 @@ enable-services:
 hide-desktop-apps:
 	@sh ./scripts/hide-desktop-apps.sh
 
+install-cargo-packages:
+	@sh ./scripts/install-cargo-packages.sh
+
 install-corefonts:
 	@sh ./scripts/install-corefonts.sh
 

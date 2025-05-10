@@ -14,6 +14,7 @@ This guide translates my personal installation, with packages that I use in my d
 | `make copy-timeshift-config`     | Copies the Timeshift configuration for system backup              |
 | `make enable-services`           | Enables and starts system services                                |
 | `make hide-desktop-apps`         | Hides unwanted applications from the desktop                      |
+| `make install-cargo-packages`    | Installs Cargo packages                                           |
 | `make install-corefonts`         | Installs Microsoft Core Fonts                                     |
 | `make install-flatpack-packages` | Installs Flatpak packages                                         |
 | `make install-gdu`               | Installs GDU (Go Disk Usage)                                      |

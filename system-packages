@@ -9,7 +9,6 @@ docker-buildx-plugin
 docker-ce
 docker-ce-cli
 docker-compose-plugin
-exa
 fd-find
 file-roller
 file-roller-nautilus
