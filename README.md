@@ -37,7 +37,6 @@ This guide translates my personal installation, with packages that I use in my d
 | `make setup-look`                | Configures the system appearance, including themes and icons      |
 | `make setup-nvidia-hybrid`       | Configures support for NVIDIA hybrid graphics                     |
 | `make setup-swap`                | Configures the system swap partition or file                      |
-| `make setup-wallpaper`           | Sets the desktop wallpaper                                        |
 | `make sync-time`                 | Synchronizes the system time                                      |
 | `make usermod`                   | Modifies system user settings                                     |
 

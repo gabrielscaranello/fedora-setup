@@ -85,9 +85,6 @@ setup-nvidia-hybrid:
 setup-swap:
 	@sh ./scripts/setup-swap.sh
 
-setup-wallpaper:
-	@sh ./scripts/setup-wallpaper.sh
-
 sync-time:
 	@sh ./scripts/sync-time.sh
 
