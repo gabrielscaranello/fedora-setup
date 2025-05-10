@@ -22,8 +22,8 @@ install-bottom:
 install-corefonts:
 	@sh ./scripts/install-corefonts.sh
 
-install-dbeaver:
-	@sh ./scripts/install-dbeaver.sh
+install-flatpack-packages:
+	@sh ./scripts/install-flatpack-packages.sh
 
 install-gdu:
 	@sh ./scripts/install-gdu.sh
@@ -51,9 +51,6 @@ install-neovim:
 
 install-nvm:
 	@sh ./scripts/install-nvm.sh
-
-install-onlyoffice:
-	@sh ./scripts/install-onlyoffice.sh
 
 install-system-packages:
 	@sh ./scripts/install-system-packages.sh
