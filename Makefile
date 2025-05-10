@@ -16,9 +16,6 @@ enable-services:
 hide-desktop-apps:
 	@sh ./scripts/hide-desktop-apps.sh
 
-install-bottom:
-	@sh ./scripts/install-bottom.sh
-
 install-corefonts:
 	@sh ./scripts/install-corefonts.sh
 
@@ -54,9 +51,6 @@ install-nvm:
 
 install-system-packages:
 	@sh ./scripts/install-system-packages.sh
-
-install-telegram:
-	@sh ./scripts/install-telegram.sh
 
 remove-unused-packages:
 	@sh ./scripts/remove-unused-packages.sh

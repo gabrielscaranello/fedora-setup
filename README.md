@@ -14,7 +14,6 @@ This guide translates my personal installation, with packages that I use in my d
 | `make copy-timeshift-config`     | Copies the Timeshift configuration for system backup              |
 | `make enable-services`           | Enables and starts system services                                |
 | `make hide-desktop-apps`         | Hides unwanted applications from the desktop                      |
-| `make install-bottom`            | Installs Bottom system monitor                                    |
 | `make install-corefonts`         | Installs Microsoft Core Fonts                                     |
 | `make install-flatpack-packages` | Installs Flatpak packages                                         |
 | `make install-gdu`               | Installs GDU (Go Disk Usage)                                      |
@@ -27,7 +26,6 @@ This guide translates my personal installation, with packages that I use in my d
 | `make install-neovim`            | Installs Neovim                                                   |
 | `make install-nvm`               | Installs NVM (Node Version Manager) to manage Node.js versions    |
 | `make install-system-packages`   | Installs essential system packages                                |
-| `make install-telegram`          | Installs Telegram                                                 |
 | `make remove-unused-packages`    | Removes unused software packages                                  |
 | `make remove-unused-repos`       | Removes unused software repositories                              |
 | `make setup-cursor-theme`        | Configures the mouse cursor theme                                 |
