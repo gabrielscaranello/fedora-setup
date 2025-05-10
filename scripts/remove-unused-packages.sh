@@ -1,9 +1,9 @@
 #! /bin/bash
 
 PWD=$(pwd)
-PACKAGES=$(cat "$PWD/unused-packages" | tr '\n' ' ')
+PACKAGES=$(tr '\n' ' ' <"${PWD}/unused-packages")
 
 echo "Removing unused packages..."
-sudo dnf remove -y $PACKAGES
+echo "$PACKAGES" | xargs sudo dnf remove -y
 sudo dnf autoremove -y
 echo "Unused packages removed."

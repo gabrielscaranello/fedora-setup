@@ -6,7 +6,7 @@ echo "Setting up Wallpaper..."
 
 echo "Copying wallpaper..."
 sudo mkdir -p /usr/share/backgrounds/user
-sudo cp $PWD/assets/wallpaper.png /usr/share/backgrounds/user/default.png
+sudo cp "$PWD"/assets/wallpaper.png /usr/share/backgrounds/user/default.png
 
 echo "Setting wallpaper..."
 gsettings set org.gnome.desktop.background picture-uri "file:///usr/share/backgrounds/user/default.png"

@@ -14,7 +14,7 @@ git clone --depth 1 -b "$BRANCH" "$GIT_URL" "$WORK_DIR"
 
 # Install
 echo "Installing..."
-cd "$WORK_DIR"
+cd "$WORK_DIR" || exit
 make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
 

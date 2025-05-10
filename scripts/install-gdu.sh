@@ -11,7 +11,7 @@ echo "Removing old files if exists..."
 rm -rf $OUTPUT_FILE
 
 echo "Downloading..."
-wget -c $DOWNLOAD_URL -O $OUTPUT_FILE
+wget -c "$DOWNLOAD_URL" -O $OUTPUT_FILE
 
 echo "Installing..."
 sudo dnf install -y $OUTPUT_FILE

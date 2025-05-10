@@ -2,7 +2,7 @@
 
 NODE_VERSION=20
 NVM_VERSION=0.39.7
-PACKAGES=$(cat "$PWD/node-packages" | tr '\n' ' ')
+PACKAGES=$(tr '\n' ' ' <"${PWD}/node-packages")
 
 echo "Installing NVM and Node..."
 
@@ -19,6 +19,6 @@ echo "Installing yarn..."
 npm i -g yarn
 
 echo "Installing node packages..."
-yarn global add $PACKAGES
+echo "$PACKAGES" | xargs yarn global add
 
 echo "NVM and Node installed."

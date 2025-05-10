@@ -1,10 +1,9 @@
 #! /bin/bash
 
 PWD=$(pwd)
-PACKAGES=$(cat "$PWD/system-packages" | tr '\n' ' ')
-EXCLUDE=$(cat "$PWD/system-excluded-packages" | tr '\n' ' ')
+PACKAGES=$(tr '\n' ' ' <"${PWD}/system-packages")
 
 echo "Installing native packages..."
 sudo dnf upgrade -y --refresh
-sudo dnf install -y $PACKAGES --exclude $EXCLUDE
+echo "$PACKAGES" | xargs sudo dnf install -y
 echo "native packages installed."

@@ -13,7 +13,7 @@ echo "Installing Bibata cursor..."
 sudo rm -rf $OUTPUT_DIR "$TARGET_DIR/$CURSOR_NAME"
 
 # Download file
-wget -c $DOWNLOAD_URL -O $OUTPUT_DIR
+wget -c "$DOWNLOAD_URL" -O $OUTPUT_DIR
 
 # Extract file
 tar -xf $OUTPUT_DIR -C $EXTRACT_DIR

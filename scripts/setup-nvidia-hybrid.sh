@@ -1,7 +1,7 @@
 #! /bin/bash
 
 PWD=$(pwd)
-PACKAGES=$(cat "$PWD/nvidia-packages" | tr '\n' ' ')
+PACKAGES=$(tr '\n' ' ' <"$PWD/nvidia-packages")
 
 echo "Configuring NVIDIA hybrid drivers..."
 
@@ -9,7 +9,7 @@ echo "Enabling additional repos..."
 sudo dnf copr enable sunwire/envycontrol -y
 
 echo "Installing driver packages"
-sudo dnf install -y $PACKAGES
+echo "$PACKAGES" | xargs sudo dnf install -y
 
 echo "Enabling nvidia driver..."
 sudo akmods --force
