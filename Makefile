@@ -22,8 +22,8 @@ install-cargo-packages:
 install-corefonts:
 	@sh ./scripts/install-corefonts.sh
 
-install-flatpack-packages:
-	@sh ./scripts/install-flatpack-packages.sh
+install-flatpak-packages:
+	@sh ./scripts/install-flatpak-packages.sh
 
 install-gdu:
 	@sh ./scripts/install-gdu.sh

@@ -16,7 +16,7 @@ This guide translates my personal installation, with packages that I use in my d
 | `make hide-desktop-apps`         | Hides unwanted applications from the desktop                      |
 | `make install-cargo-packages`    | Installs Cargo packages                                           |
 | `make install-corefonts`         | Installs Microsoft Core Fonts                                     |
-| `make install-flatpack-packages` | Installs Flatpak packages                                         |
+| `make install-flatpak-packages` | Installs Flatpak packages                                         |
 | `make install-gdu`               | Installs GDU (Go Disk Usage)                                      |
 | `make install-gitflow-cjs`       | Installs GitFlow CJS                                              |
 | `make install-gnome-extensions`  | Installs GNOME extensions                                         |
