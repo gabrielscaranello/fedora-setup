@@ -8,7 +8,6 @@ curl
 docker-buildx-plugin
 docker-ce
 docker-ce-cli
-docker-compose
 docker-compose-plugin
 exa
 fd-find
