@@ -79,6 +79,9 @@ setup-icon-theme:
 setup-look:
 	@sh ./scripts/setup-look.sh
 
+setup-nvidia:
+	@sh ./scripts/setup-nvidia.sh
+
 setup-nvidia-hybrid:
 	@sh ./scripts/setup-nvidia-hybrid.sh
 

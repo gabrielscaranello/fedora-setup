@@ -1,7 +1,9 @@
 #! /bin/bash
 
 PWD=$(pwd)
-PACKAGES=$(tr '\n' ' ' <"$PWD/nvidia-packages")
+REGULAR_PACKAGES=$(tr '\n' ' ' <"$PWD/nvidia-packages")
+HYBRID_PACKAGES=$(tr '\n' ' ' <"$PWD/nvidia-hybrid-packages")
+PACKAGES="$REGULAR_PACKAGES $HYBRID_PACKAGES"
 
 echo "Configuring NVIDIA hybrid drivers..."
 

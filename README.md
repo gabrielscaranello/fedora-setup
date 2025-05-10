@@ -35,6 +35,7 @@ This guide translates my personal installation, with packages that I use in my d
 | `make setup-gtk-theme`           | Configures the GTK theme                                          |
 | `make setup-icon-theme`          | Configures the system icon theme                                  |
 | `make setup-look`                | Configures the system appearance, including themes and icons      |
+| `make setup-nvidia`              | Configures support for NVIDIA graphics                            |
 | `make setup-nvidia-hybrid`       | Configures support for NVIDIA hybrid graphics                     |
 | `make setup-swap`                | Configures the system swap partition or file                      |
 | `make sync-time`                 | Synchronizes the system time                                      |
