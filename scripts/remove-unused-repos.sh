@@ -1,7 +1,7 @@
 #! /bin/bash
 
 PWD=$(pwd)
-REPOS=$(tr '\n' ' ' <"${PWD}/unused_repos")
+REPOS=$(tr '\n' ' ' <"${PWD}/unused-repos")
 
 echo "Removing unused repos..."
 sudo rm -rf "$REPOS"
