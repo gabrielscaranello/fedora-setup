@@ -25,9 +25,6 @@ install-corefonts:
 install-flatpak-packages:
 	@sh ./scripts/install-flatpak-packages.sh
 
-install-gdu:
-	@sh ./scripts/install-gdu.sh
-
 install-gitflow-cjs:
 	@sh ./scripts/install-gitflow-cjs.sh
 
@@ -45,9 +42,6 @@ install-jetbrains-mono:
 
 install-multimedia-codecs:
 	@sh ./scripts/install-multimedia-codecs.sh
-
-install-neovim:
-	@sh ./scripts/install-neovim.sh
 
 install-nvm:
 	@sh ./scripts/install-nvm.sh

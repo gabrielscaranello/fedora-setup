@@ -16,15 +16,13 @@ This guide translates my personal installation, with packages that I use in my d
 | `make hide-desktop-apps`         | Hides unwanted applications from the desktop                      |
 | `make install-cargo-packages`    | Installs Cargo packages                                           |
 | `make install-corefonts`         | Installs Microsoft Core Fonts                                     |
-| `make install-flatpak-packages` | Installs Flatpak packages                                         |
-| `make install-gdu`               | Installs GDU (Go Disk Usage)                                      |
+| `make install-flatpak-packages`  | Installs Flatpak packages                                         |
 | `make install-gitflow-cjs`       | Installs GitFlow CJS                                              |
 | `make install-gnome-extensions`  | Installs GNOME extensions                                         |
 | `make install-jetbrains-mono`    | Installs JetBrains Mono font                                      |
 | `make install-lazydocker`        | Installs LazyDocker                                               |
 | `make install-lazygit`           | Installs LazyGit                                                  |
 | `make install-multimedia-codecs` | Installs multimedia codecs                                        |
-| `make install-neovim`            | Installs Neovim                                                   |
 | `make install-nvm`               | Installs NVM (Node Version Manager) to manage Node.js versions    |
 | `make install-system-packages`   | Installs essential system packages                                |
 | `make remove-unused-packages`    | Removes unused software packages                                  |

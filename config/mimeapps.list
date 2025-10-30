@@ -1,18 +1,11 @@
 [Default Applications]
-text/html=google-chrome.desktop
-x-scheme-handler/http=google-chrome.desktop
-x-scheme-handler/https=google-chrome.desktop
-x-scheme-handler/about=google-chrome.desktop
-x-scheme-handler/unknown=google-chrome.desktop
-application/xhtml+xml=google-chrome.desktop
-x-scheme-handler/mailto=google-chrome.desktop
+x-scheme-handler/http=firefox.desktop
+application/xhtml+xml=firefox.desktop
+text/html=firefox.desktop
+x-scheme-handler/https=firefox.desktop
 
 [Added Associations]
-image/svg+xml=gimp.desktop;
-image/png=gimp.desktop;
-x-scheme-handler/http=firefox.desktop;google-chrome.desktop;
-application/xhtml+xml=firefox.desktop;google-chrome.desktop;
-text/html=firefox.desktop;google-chrome.desktop;
-x-scheme-handler/https=firefox.desktop;google-chrome.desktop;
-text/plain=org.gnome.gedit.desktop;nvim.desktop;
-text/markdown=org.gnome.gedit.desktop;
+x-scheme-handler/http=com.google.Chrome.desktop;firefox.desktop;
+application/xhtml+xml=com.google.Chrome.desktop;firefox.desktop;
+text/html=com.google.Chrome.desktop;firefox.desktop;
+x-scheme-handler/https=com.google.Chrome.desktop;firefox.desktop;
