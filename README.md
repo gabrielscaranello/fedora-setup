@@ -14,11 +14,11 @@ This guide translates my personal installation, with packages that I use in my d
 | `make copy-timeshift-config`     | Copies the Timeshift configuration for system backup              |
 | `make enable-services`           | Enables and starts system services                                |
 | `make hide-desktop-apps`         | Hides unwanted applications from the desktop                      |
-| `make install-cargo-packages`    | Installs Cargo packages                                           |
 | `make install-corefonts`         | Installs Microsoft Core Fonts                                     |
 | `make install-flatpak-packages`  | Installs Flatpak packages                                         |
 | `make install-gitflow-cjs`       | Installs GitFlow CJS                                              |
 | `make install-gnome-extensions`  | Installs GNOME extensions                                         |
+| `make install-go-packages`       | Installs Packages used by go                                      |
 | `make install-jetbrains-mono`    | Installs JetBrains Mono font                                      |
 | `make install-lazydocker`        | Installs LazyDocker                                               |
 | `make install-lazygit`           | Installs LazyGit                                                  |
@@ -32,8 +32,8 @@ This guide translates my personal installation, with packages that I use in my d
 | `make setup-gtk-theme`           | Configures the GTK theme                                          |
 | `make setup-icon-theme`          | Configures the system icon theme                                  |
 | `make setup-look`                | Configures the system appearance, including themes and icons      |
-| `make setup-nvidia`              | Configures support for NVIDIA graphics                            |
 | `make setup-nvidia-hybrid`       | Configures support for NVIDIA hybrid graphics                     |
+| `make setup-nvidia`              | Configures support for NVIDIA graphics                            |
 | `make setup-swap`                | Configures the system swap partition or file                      |
 | `make sync-time`                 | Synchronizes the system time                                      |
 | `make usermod`                   | Modifies system user settings                                     |

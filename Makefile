@@ -16,9 +16,6 @@ enable-services:
 hide-desktop-apps:
 	@sh ./scripts/hide-desktop-apps.sh
 
-install-cargo-packages:
-	@sh ./scripts/install-cargo-packages.sh
-
 install-corefonts:
 	@sh ./scripts/install-corefonts.sh
 
@@ -30,6 +27,9 @@ install-gitflow-cjs:
 
 install-gnome-extensions:
 	@sh ./scripts/install-gnome-extensions.sh
+
+install-go-packages:
+	@sh ./scripts/install-go-packages.sh
 
 install-lazydocker:
 	@sh ./scripts/install-lazydocker.sh
