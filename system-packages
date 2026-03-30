@@ -1,6 +1,7 @@
 bat
 btop
 cargo
+clang
 cmake
 code
 containerd.io
@@ -34,6 +35,7 @@ libgda
 libgda-sqlite
 libsass
 libsqlite3x-devel
+lua5.1
 luarocks
 make
 neovim
