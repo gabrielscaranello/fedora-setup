@@ -7,7 +7,7 @@ _add_docker_repo() {
   sudo rm -rf /etc/yum.repos.d/docker-ce.repo
 
   echo "Adding docker repo..."
-  sudo dnf-3 config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+  sudo dnf config-manager addrepo --from-repofile https://download.docker.com/linux/fedora/docker-ce.repo
 
   echo "docker repo added."
 }

@@ -1,9 +1,6 @@
-NODE_VERSION=22
+NODE_VERSION=24
 NVM_VERSION=0.40.3
 NPM_PACKAGES=$(tr '\n' ' ' <"$PWD/npm-packages")
-
-echo "Removing system Node..."
-sudo dnf remove -y nodejs
 
 echo "Installing NVM and Node..."
 

@@ -12,7 +12,6 @@ bash "${PWD}/scripts/add-missing-repos.sh"
 bash "${PWD}/scripts/install-system-packages.sh"
 bash "${PWD}/scripts/install-multimedia-codecs.sh"
 bash "${PWD}/scripts/install-flatpak-packages.sh"
-bash "${PWD}/scripts/install-cargo-packages.sh"
 bash "${PWD}/scripts/install-nvm.sh"
 
 bash "${PWD}/scripts/install-corefonts.sh"

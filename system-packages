@@ -9,6 +9,7 @@ docker-buildx-plugin
 docker-ce
 docker-ce-cli
 docker-compose-plugin
+eza
 fd-find
 file-roller
 file-roller-nautilus
@@ -19,7 +20,6 @@ gdu
 gettext
 git
 glibc-gconv-extra
-gnome-shell-extension-appindicator
 gnome-shell-extension-blur-my-shell
 gnome-shell-extension-caffeine
 gnome-shell-extension-user-theme
